@@ -1,0 +1,50 @@
+﻿@model ETicketOffice.Domain.DTO.CartDto
+
+<div>Cart Info</div>
+
+<div class="container">
+
+    <div class="row m-5">
+        <a asp-controller="Cart" asp-action="Order" class="btn btn-success">Order Now</a>
+    </div>
+
+    <div class="row m-5">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Movie Name</th>
+                    <th scope="col">Ticket Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.TicketsInCart.Count; i++)
+                {
+                    var item = Model.TicketsInCart[i];
+
+                    <tr>
+                        <th scope="row">@(i+1)</th>
+                        <td>@item.Ticket.MovieName</td>
+                        <td>@item.Ticket.TicketPrice</td>
+                        <td>@item.Quantity</td>
+                        <td>@(item.Ticket.TicketPrice * item.Quantity)</td>
+                        <td><a asp-route-ticketId="@item.Ticket.Id"  asp-action="DeleteTicketFromCart" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                }
+
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th scope="col">Total Price</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">@Model.TotalPrice</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

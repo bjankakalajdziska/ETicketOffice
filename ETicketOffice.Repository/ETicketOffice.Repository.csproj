@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210622141318_Second.cs" />
+    <Compile Remove="Migrations\20210622141318_Second.Designer.cs" />
+    <Compile Remove="Migrations\20210622144614_Second.cs" />
+    <Compile Remove="Migrations\20210622144614_Second.Designer.cs" />
+    <Compile Remove="Migrations\20210623165911_Third.cs" />
+    <Compile Remove="Migrations\20210623165911_Third.Designer.cs" />
+    <Compile Remove="Migrations\20210623172425_Third.cs" />
+    <Compile Remove="Migrations\20210623172425_Third.Designer.cs" />
+    <Compile Remove="Migrations\20210623174726_Second.cs" />
+    <Compile Remove="Migrations\20210623174726_Second.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ETicketOffice.Domain\ETicketOffice.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
