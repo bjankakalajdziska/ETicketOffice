@@ -23,6 +23,7 @@ namespace ETicketOffice.Web
 {
     public class Startup
     {
+        private EmailSettings emailService;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;

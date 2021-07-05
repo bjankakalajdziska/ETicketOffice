@@ -39,5 +39,14 @@ namespace ETicketOffice.Repository.Implementation
                .Include("Tickets.Ticket")
                .SingleOrDefaultAsync(z => z.Id == model.Id).Result;
         }
+
+        public List<Order> getAllOrdersFromUser(string id)
+        {
+            return entities
+                .Include(z => z.User.Id==id)
+                .Include(z => z.Tickets)
+                .Include("Tickets.Ticket")
+                .ToListAsync().Result;
+        }
     }
 }

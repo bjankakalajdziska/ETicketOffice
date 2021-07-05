@@ -9,6 +9,8 @@ namespace ETicketOffice.Services.Interface
     {
         List<Order> getAllOrders();
 
+        List<Order> getAllOrdersFromUser(string userId);
+
         Order getOrderDetails(BaseEntity model);
     }
 }

@@ -19,7 +19,7 @@ namespace ETicketOffice.Repository
         public virtual DbSet<Ticket> Tickets { get; set; }
         public virtual DbSet<Cart> Carts { get; set; }
         public virtual DbSet<TicketsInCart> TicketsInCart { get; set; }
-        public virtual DbSet<TicketsInOrder> ProductInOrders { get; set; }
+        public virtual DbSet<TicketsInOrder> TicketsInOrder { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<EmailMessage> EmailMessages { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)

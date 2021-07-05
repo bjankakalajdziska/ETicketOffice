@@ -21,6 +21,11 @@ namespace ETicketOffice.Services.Implementation
             return this._orderRepository.getAllOrders();
         }
 
+        public List<Order> getAllOrdersFromUser(string id)
+        {
+            return this._orderRepository.getAllOrdersFromUser(id);
+        }
+
         public Order getOrderDetails(BaseEntity model)
         {
             return this._orderRepository.getOrderDetails(model);
